@@ -115,7 +115,7 @@ export function About() {
 
                 <div className="relative bg-white p-2 rounded-3xl shadow-2xl shadow-[#C4B5FD]/20">
                   <ImageWithFallback
-                    src="/Koushi photo.jpg"
+                    src="/koushi-photo.jpg"
                     alt="Koushika M"
                     className="relative w-full max-w-md aspect-square object-cover rounded-2xl"
                   />
