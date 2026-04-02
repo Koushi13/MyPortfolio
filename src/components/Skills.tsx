@@ -25,13 +25,13 @@ export function Skills() {
     {
       category: 'UI/UX Fundamentals',
       icon: <Code2 className="h-6 w-6" />,
-      skills: ['User Research', 'Wireframing', 'Prototyping', 'User Flows', 'Usability Testing', 'Interaction Design'],
+      skills: ['User Research', 'User Flows', 'Journey Mapping', 'Wireframing', 'Prototyping', 'Usability Principles'],
       color: '#C4B5FD',
     },
     {
       category: 'UX Process',
       icon: <Brain className="h-6 w-6" />,
-      skills: ['Problem Framing', 'User Journey Mapping', 'Information Architecture', 'Low-Fidelity Prototypes', 'Feedback Iteration', 'Design Thinking'],
+      skills: ['Problem Framing', 'Information Architecture', 'Interaction Design', 'Responsive Design', 'Feedback Iteration', 'Design Thinking'],
       color: '#B8D4E8',
     },
     {
@@ -43,13 +43,13 @@ export function Skills() {
     {
       category: 'Graphic Design',
       icon: <Globe className="h-6 w-6" />,
-      skills: ['Brand Visuals', 'Social Creatives', 'Poster Design', 'Visual Composition', 'Image Editing', 'Design Consistency'],
+      skills: ['Layout and Typography', 'Color Theory', 'Visual Hierarchy', 'Logo, Poster and Brochure Design', 'Social Media Creatives', 'Branding Materials'],
       color: '#FDB4C8',
     },
     {
       category: 'Tools',
       icon: <BarChart3 className="h-6 w-6" />,
-      skills: ['Figma', 'Adobe Photoshop', 'Adobe Illustrator', 'Canva', 'Miro', 'Google Workspace'],
+      skills: ['Figma', 'Figma Make', 'Adobe Illustrator', 'Adobe Photoshop', 'Adobe InDesign, Dimension', 'Canva'],
       color: '#FFD5C2',
     },
     {
@@ -61,7 +61,7 @@ export function Skills() {
     {
       category: 'Basic Frontend',
       icon: <Database className="h-6 w-6" />,
-      skills: ['HTML', 'CSS', 'JavaScript', 'Responsive Markup', 'UI Feasibility', 'Developer Collaboration'],
+      skills: ['HTML', 'CSS', 'JavaScript (Basic)', 'Prompt-Based Frontend Development', 'Vibe Coding (AI-assisted)', 'Git and GitHub'],
       color: '#B8D4E8',
     },
     {
@@ -205,10 +205,10 @@ export function Skills() {
             <div className="space-y-4">
               {[
                 { name: 'UI/UX Design', level: 90, color: '#C4B5FD' },
-                { name: 'Wireframing & Prototyping', level: 88, color: '#B8D4E8' },
-                { name: 'Visual Design', level: 85, color: '#A8D5BA' },
-                { name: 'Usability & User Flows', level: 82, color: '#FDB4C8' },
-                { name: 'Basic Frontend (HTML, CSS, JavaScript)', level: 76, color: '#FFD5C2' },
+                { name: 'Wireframing and Prototyping', level: 88, color: '#B8D4E8' },
+                { name: 'Graphic and Visual Design', level: 86, color: '#A8D5BA' },
+                { name: 'Prompt-Based Frontend Development', level: 82, color: '#FDB4C8' },
+                { name: 'Basic Frontend (HTML, CSS, JavaScript)', level: 78, color: '#FFD5C2' },
               ].map((skill, index) => (
                 <motion.div
                   key={index}

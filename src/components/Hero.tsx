@@ -152,7 +152,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              UI/UX & Graphic Designer
+              UI/UX Designer | Graphic Designer | Prompt-Based Developer
             </motion.h2>
 
             <motion.p
@@ -161,8 +161,9 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
             >
-              I design clean, user-friendly interfaces that solve real problems with clarity.
-              I focus on usability, visual consistency, and practical solutions that teams can build with confidence.
+              I design clean, intuitive, and user-centered digital experiences.
+              I combine UI/UX thinking, visual design, and AI-assisted frontend workflows to turn ideas into
+              practical, implementation-ready products.
             </motion.p>
           </motion.div>
 
@@ -182,14 +183,14 @@ export function Hero() {
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
+                asChild
                 variant="outline"
                 className="border-2 border-[#C4B5FD] text-[#374151] hover:bg-[#C4B5FD]/10 px-8 py-6 backdrop-blur-sm bg-white/50"
-                onClick={() => {
-                  alert('Resume download functionality - Replace with your actual resume PDF link.');
-                }}
               >
-                <Download className="mr-2 h-5 w-5" />
-                Download Resume
+                <a href="/koushika%20resume.pdf" download="koushika resume.pdf" aria-label="Download resume PDF">
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Resume
+                </a>
               </Button>
             </motion.div>
           </motion.div>

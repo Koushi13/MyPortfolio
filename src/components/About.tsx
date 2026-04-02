@@ -28,13 +28,13 @@ export function About() {
     {
       icon: <Target className="h-6 w-6" />,
       title: 'Focus Areas',
-      description: 'User research, wireframing, prototyping, user flows, usability, and interface design in Figma.',
+      description: 'User research, journey mapping, wireframing, prototyping, usability, and implementation-ready interface design.',
       color: '#B8D4E8',
     },
     {
       icon: <Sparkles className="h-6 w-6" />,
       title: 'Career Goals',
-      description: 'Designing accessible and visually consistent products that improve user experience and deliver clear value.',
+      description: 'Creating clean, intuitive, and visually consistent digital products that deliver measurable user value.',
       color: '#A8D5BA',
     },
   ];
@@ -144,9 +144,9 @@ export function About() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                 >
-                  Hi! I'm Koushika M, a UI/UX intern and designer who enjoys turning ideas into clean and user-friendly
-                  interfaces. I focus on understanding user needs, simplifying flows, and creating experiences that feel
-                  intuitive from the first interaction.
+                  I am a passionate UI/UX and graphic designer who enjoys transforming ideas into meaningful digital
+                  experiences. My approach starts with understanding user needs and turning them into structured,
+                  intuitive interfaces that are simple to use and easy to navigate.
                 </motion.p>
                 <motion.p
                   className="text-[#374151] text-[1.125rem] leading-relaxed"
@@ -155,9 +155,9 @@ export function About() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.5 }}
                 >
-                  Along with UI/UX design, I bring basic frontend knowledge in HTML, CSS, and JavaScript, which helps me
-                  create practical and implementable design solutions. I aim to craft visual systems that are consistent,
-                  useful, and aligned with both user goals and product needs.
+                  Alongside design, I work with prompt-based frontend workflows and vibe coding to support faster and
+                  practical implementation. With a basic foundation in HTML, CSS, and JavaScript, I create solutions that
+                  are visually strong, user-focused, and ready for development teams.
                 </motion.p>
               </div>
 

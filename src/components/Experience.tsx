@@ -16,37 +16,37 @@ export function Experience() {
     {
       title: '🎯 UI/UX Intern',
       company: 'AmasQIS',
-      duration: '2024 - Present',
+      duration: '2026 - Present',
       location: 'India',
       color: '#C4B5FD',
       achievements: [
-        'Worked as a UI/UX Designer focusing on creating clean and user-friendly interfaces.',
-        'Contributed to designing layouts, improving usability, and building interactive prototypes.',
-        'Collaborated with the team to translate ideas into structured and practical design solutions.',
+        'Designed user-centric UI screens and created structured wireframes in Figma.',
+        'Built interactive prototypes and refined flows to improve clarity and usability.',
+        'Used AI-driven prompts and vibe coding in VS Code to support frontend implementation with basic GitHub version control.',
       ],
     },
     {
       title: '🎯 Project Management & Social Media Manager',
       company: 'Brand Ventures',
-      duration: '2023 - 2024',
+      duration: 'Jan 2024 - Jan 2025',
       location: 'India',
       color: '#B8D4E8',
       achievements: [
-        'Designed social media creatives and maintained visual consistency across different platforms.',
-        'Managed content planning and ensured designs aligned with brand identity.',
-        'Focused on delivering visually engaging and user-friendly content for digital platforms.',
+        'Managed social media accounts and designed creatives using Canva.',
+        'Improved local visibility through Google My Business optimization.',
+        'Created and managed blog content to support audience engagement and brand communication.',
       ],
     },
     {
       title: 'Customer Care Executive',
       company: 'Maniraj Cotton Mills',
-      duration: 'Previous Role',
+      duration: 'Feb 2025 - Jul 2025',
       location: 'India',
       color: '#A8D5BA',
       achievements: [
-        'Handled customer interactions and understood user needs through direct communication.',
-        'Managed records and coordinated billing processes efficiently.',
-        'This experience helped develop problem-solving skills and a better understanding of user behavior.',
+        'Managed attendance and employee records with process accuracy.',
+        'Handled invoice and payment-related customer queries with clear communication.',
+        'Tracked expenses and strengthened organization, communication, and problem-solving skills.',
       ],
     },
   ];
@@ -98,7 +98,7 @@ export function Experience() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              My professional journey in UI/UX design
+              My professional journey across UI/UX, design execution, and communication-focused roles
             </motion.p>
           </motion.div>
 

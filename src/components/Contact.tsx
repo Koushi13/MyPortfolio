@@ -162,7 +162,7 @@ export function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              Looking for thoughtful product design support? Let's connect.
+              Open to UI/UX, graphic design, and prompt-based frontend collaboration opportunities.
             </motion.p>
           </motion.div>
 
@@ -178,8 +178,9 @@ export function Contact() {
               <div>
                 <h3 className="text-[#374151] mb-3">Let's work together</h3>
                 <p className="text-[#9CA3AF] mb-4 leading-relaxed">
-                  I help teams shape clear and user-friendly digital experiences. If you need support with
-                  interface design, user flows, or visual direction, I would love to discuss your project.
+                  I help teams build clear and user-friendly digital experiences. If you need support with
+                  interface design, user flows, visual communication, or AI-assisted frontend workflows,
+                  I would love to discuss your project.
                 </p>
               </div>
 
@@ -224,7 +225,7 @@ export function Contact() {
               >
                 <h4 className="text-[#374151] mb-3">Available for</h4>
                 <ul className="space-y-2.5">
-                  {['UI/UX Design', 'Website & App Design', 'Wireframing & Prototyping', 'Design collaboration (Remote/Hybrid)'].map(
+                  {['UI/UX Design', 'Graphic Design', 'Wireframing and Prototyping', 'Prompt-based Frontend Collaboration'].map(
                     (item, index) => (
                       <motion.li
                         key={index}
