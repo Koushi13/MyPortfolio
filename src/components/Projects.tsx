@@ -39,6 +39,7 @@ export function Projects() {
       description:
         'Designed a user-friendly ride booking mobile application focused on quick booking, real-time tracking, and seamless user experience. Created structured user flows, wireframes, and high-fidelity UI screens using Figma, ensuring clarity and usability.',
       image: '/projects/one-ride-logo.png',
+      imageFit: 'contain' as const,
       tags: ['Problem', 'User Flow', 'Wireframes', 'Final UI Screens', 'Prototype', 'Figma', 'Illustrator'],
       behance: 'https://www.behance.net/koushika',
       caseStudyPath: '/case-study/one-ride',
@@ -50,6 +51,7 @@ export function Projects() {
       description:
         'Designed a responsive website to showcase the ride booking application, focusing on clear communication of features, user benefits, and easy navigation. The website highlights app functionalities, download options, and brand identity.',
       image: 'https://images.unsplash.com/photo-1517940310602-26535839fe84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+      imageFit: 'cover' as const,
       tags: ['Landing Page Design', 'Features Section', 'App Showcase', 'Call-to-Action (Download App)', 'Figma (if used)'],
       behance: 'https://www.behance.net/koushika',
       caseStudyPath: '#',
@@ -134,7 +136,11 @@ export function Projects() {
                     <ImageWithFallback
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover"
+                      className={
+                        project.imageFit === 'contain'
+                          ? 'w-full h-full object-contain bg-white p-10'
+                          : 'w-full h-full object-cover'
+                      }
                     />
                   </motion.div>
 
