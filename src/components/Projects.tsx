@@ -38,7 +38,7 @@ export function Projects() {
       title: 'Ride Booking Mobile App - UI/UX Case Study',
       description:
         'Designed a user-friendly ride booking mobile application focused on quick booking, real-time tracking, and seamless user experience. Created structured user flows, wireframes, and high-fidelity UI screens using Figma, ensuring clarity and usability.',
-      image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+      image: '/projects/one-ride-logo.png',
       tags: ['Problem', 'User Flow', 'Wireframes', 'Final UI Screens', 'Prototype', 'Figma', 'Illustrator'],
       behance: 'https://www.behance.net/koushika',
       caseStudyPath: '/case-study/one-ride',
