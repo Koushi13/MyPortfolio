@@ -85,46 +85,62 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.9 }}
-          className="relative flex justify-center items-end gap-6 max-w-5xl mx-auto"
+          className="relative max-w-5xl mx-auto"
         >
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1.1 }}
-            className="relative group cursor-pointer"
-          >
-            <div className="w-48 aspect-[412/917] bg-gradient-to-b from-white/20 to-white/10 backdrop-blur-sm rounded-[2rem] p-[3px] shadow-2xl border border-white/30 transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-4 group-hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)]">
-              <div className="w-full h-full bg-white rounded-[1.85rem] overflow-hidden">
-                <img src={screen1} alt="Sign In Screen" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
-              </div>
-            </div>
-          </motion.div>
+          <div className="-mx-6 px-6 md:mx-0 md:px-0">
+            <div className="flex gap-4 overflow-x-auto md:overflow-visible md:justify-center md:items-end md:gap-6 snap-x snap-mandatory pb-6 md:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              <motion.div
+                initial={{ y: 60, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 1.1 }}
+                className="relative group cursor-pointer snap-center shrink-0"
+              >
+                <div className="w-[16rem] sm:w-48 aspect-[412/917] bg-gradient-to-b from-white/20 to-white/10 backdrop-blur-sm rounded-[2rem] p-[3px] shadow-2xl border border-white/30 transition-all duration-500 group-hover:scale-105 md:group-hover:-translate-y-4 group-hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)]">
+                  <div className="w-full h-full bg-white rounded-[1.85rem] overflow-hidden">
+                    <img
+                      src={screen1}
+                      alt="Sign In Screen"
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+              </motion.div>
 
-          <motion.div
-            initial={{ y: 40, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1.25 }}
-            className="relative -mt-8 group cursor-pointer"
-          >
-            <div className="w-56 aspect-[412/917] bg-gradient-to-b from-white/30 to-white/20 backdrop-blur-sm rounded-[2.2rem] p-[3px] shadow-2xl border border-white/40 transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-6 group-hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.6)]">
-              <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
-                <img src={screen2} alt="Home Screen" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
-              </div>
-            </div>
-          </motion.div>
+              <motion.div
+                initial={{ y: 40, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 1.25 }}
+                className="relative md:-mt-8 group cursor-pointer snap-center shrink-0"
+              >
+                <div className="w-[17rem] sm:w-56 aspect-[412/917] bg-gradient-to-b from-white/30 to-white/20 backdrop-blur-sm rounded-[2.2rem] p-[3px] shadow-2xl border border-white/40 transition-all duration-500 group-hover:scale-105 md:group-hover:scale-110 md:group-hover:-translate-y-6 group-hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.6)]">
+                  <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
+                    <img
+                      src={screen2}
+                      alt="Home Screen"
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+              </motion.div>
 
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1.4 }}
-            className="relative group cursor-pointer"
-          >
-            <div className="w-48 aspect-[412/917] bg-gradient-to-b from-white/20 to-white/10 backdrop-blur-sm rounded-[2rem] p-[3px] shadow-2xl border border-white/30 transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-4 group-hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)]">
-              <div className="w-full h-full bg-white rounded-[1.85rem] overflow-hidden">
-                <img src={screen10} alt="Trip Screen" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
-              </div>
+              <motion.div
+                initial={{ y: 60, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 1.4 }}
+                className="relative group cursor-pointer snap-center shrink-0"
+              >
+                <div className="w-[16rem] sm:w-48 aspect-[412/917] bg-gradient-to-b from-white/20 to-white/10 backdrop-blur-sm rounded-[2rem] p-[3px] shadow-2xl border border-white/30 transition-all duration-500 group-hover:scale-105 md:group-hover:-translate-y-4 group-hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)]">
+                  <div className="w-full h-full bg-white rounded-[1.85rem] overflow-hidden">
+                    <img
+                      src={screen10}
+                      alt="Trip Screen"
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+              </motion.div>
             </div>
-          </motion.div>
+          </div>
         </motion.div>
       </motion.div>
     </section>

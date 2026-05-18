@@ -28,7 +28,11 @@ function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="fx-aurora fx-float-slow" />
+        <div className="fx-grain" />
+      </div>
       <Header />
       <main>
         <Hero />

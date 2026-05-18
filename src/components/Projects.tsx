@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { ExternalLink } from 'lucide-react';
 import { Button } from './ui/button';
+import { useIsMobile } from './ui/use-mobile';
 
 function BehanceIcon({ className = '' }: { className?: string }) {
   return (
@@ -20,6 +21,7 @@ function BehanceIcon({ className = '' }: { className?: string }) {
 
 export function Projects() {
   const navigate = useNavigate();
+  const isMobile = useIsMobile();
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -29,6 +31,7 @@ export function Projects() {
   const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const projects = [
     {
@@ -117,6 +120,9 @@ export function Projects() {
                 onMouseLeave={() => setHoveredIndex(null)}
                 whileHover={{ y: -10 }}
                 className="group bg-white/80 backdrop-blur-sm rounded-3xl overflow-hidden shadow-lg border border-[#E8E6E1] hover:border-[#C4B5FD]/50 hover:shadow-2xl hover:shadow-[#C4B5FD]/20 transition-all"
+                onClick={() => {
+                  if (isMobile) setActiveIndex((current) => (current === index ? null : index));
+                }}
               >
                 <div className="relative overflow-hidden aspect-video">
                   <motion.div
@@ -150,15 +156,18 @@ export function Projects() {
                     className="absolute bottom-4 left-4 right-4 flex gap-3"
                     initial={{ y: 20, opacity: 0 }}
                     animate={{
-                      y: hoveredIndex === index ? 0 : 20,
-                      opacity: hoveredIndex === index ? 1 : 0,
+                      y: hoveredIndex === index || (isMobile && activeIndex === index) ? 0 : 20,
+                      opacity: hoveredIndex === index || (isMobile && activeIndex === index) ? 1 : 0,
                     }}
                     transition={{ duration: 0.3 }}
                   >
                     <Button
                       size="sm"
                       className="flex-1 bg-white/90 hover:bg-white text-[#374151] shadow-lg backdrop-blur-sm"
-                      onClick={() => project.caseStudyPath !== '#' && navigate(project.caseStudyPath)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        project.caseStudyPath !== '#' && navigate(project.caseStudyPath);
+                      }}
                       disabled={project.caseStudyPath === '#'}
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
@@ -169,7 +178,10 @@ export function Projects() {
                         size="sm"
                         variant="outline"
                         className="bg-white/20 backdrop-blur-sm border-white/50 text-white hover:bg-white/30 shadow-lg"
-                        onClick={() => window.open(project.sourceFile, '_blank')}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open(project.sourceFile, '_blank');
+                        }}
                       >
                         Source File
                       </Button>
@@ -178,7 +190,10 @@ export function Projects() {
                       size="sm"
                       variant="outline"
                       className="bg-white/20 backdrop-blur-sm border-white/50 text-white hover:bg-white/30 shadow-lg"
-                      onClick={() => window.open(project.behance, '_blank')}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open(project.behance, '_blank');
+                      }}
                     >
                       <BehanceIcon className="h-4 w-4" />
                     </Button>
@@ -218,6 +233,45 @@ export function Projects() {
                         {tag}
                       </motion.span>
                     ))}
+                  </div>
+
+                  <div className="mt-4 flex gap-3 md:hidden">
+                    <Button
+                      size="sm"
+                      className="flex-1 bg-[#374151] hover:bg-[#2b3441] text-white shadow-lg"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        if (project.caseStudyPath !== '#') navigate(project.caseStudyPath);
+                      }}
+                      disabled={project.caseStudyPath === '#'}
+                    >
+                      <ExternalLink className="mr-2 h-4 w-4" />
+                      Case Study
+                    </Button>
+                    {'sourceFile' in project && project.sourceFile ? (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="border-[#374151]/20 text-[#374151] bg-white/80"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open(project.sourceFile, '_blank');
+                        }}
+                      >
+                        Source File
+                      </Button>
+                    ) : null}
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="border-[#374151]/20 text-[#374151] bg-white/80"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open(project.behance, '_blank');
+                      }}
+                    >
+                      <BehanceIcon className="h-4 w-4" />
+                    </Button>
                   </div>
                 </div>
               </motion.div>
