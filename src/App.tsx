@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -7,8 +8,9 @@ import { Projects } from './components/Projects';
 import { Experience } from './components/Experience';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { OneRideCaseStudy } from './pages/OneRideCaseStudy';
 
-export default function App() {
+function HomePage() {
   useEffect(() => {
     // Smooth scroll behavior
     document.documentElement.style.scrollBehavior = 'smooth';
@@ -38,5 +40,14 @@ export default function App() {
       </main>
       <Footer />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/case-study/one-ride" element={<OneRideCaseStudy />} />
+    </Routes>
   );
 }

@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { ExternalLink } from 'lucide-react';
 import { Button } from './ui/button';
@@ -18,6 +19,7 @@ function BehanceIcon({ className = '' }: { className?: string }) {
 }
 
 export function Projects() {
+  const navigate = useNavigate();
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -36,7 +38,8 @@ export function Projects() {
       image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
       tags: ['Problem', 'User Flow', 'Wireframes', 'Final UI Screens', 'Prototype', 'Figma', 'Illustrator'],
       behance: 'https://www.behance.net/koushika',
-      demo: '#',
+      caseStudyPath: '/case-study/one-ride',
+      sourceFile: '/case-studies/1ride-case-study.zip',
       color: '#C4B5FD',
     },
     {
@@ -46,7 +49,7 @@ export function Projects() {
       image: 'https://images.unsplash.com/photo-1517940310602-26535839fe84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
       tags: ['Landing Page Design', 'Features Section', 'App Showcase', 'Call-to-Action (Download App)', 'Figma (if used)'],
       behance: 'https://www.behance.net/koushika',
-      demo: '#',
+      caseStudyPath: '#',
       color: '#B8D4E8',
     },
   ];
@@ -155,11 +158,22 @@ export function Projects() {
                     <Button
                       size="sm"
                       className="flex-1 bg-white/90 hover:bg-white text-[#374151] shadow-lg backdrop-blur-sm"
-                      onClick={() => window.open(project.demo, '_blank')}
+                      onClick={() => project.caseStudyPath !== '#' && navigate(project.caseStudyPath)}
+                      disabled={project.caseStudyPath === '#'}
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
+                      Case Study
                     </Button>
+                    {'sourceFile' in project && project.sourceFile ? (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="bg-white/20 backdrop-blur-sm border-white/50 text-white hover:bg-white/30 shadow-lg"
+                        onClick={() => window.open(project.sourceFile, '_blank')}
+                      >
+                        Source File
+                      </Button>
+                    ) : null}
                     <Button
                       size="sm"
                       variant="outline"
@@ -172,7 +186,17 @@ export function Projects() {
                 </div>
 
                 <div className="p-5">
-                  <h3 className="text-[#374151] mb-2">{project.title}</h3>
+                  {project.caseStudyPath !== '#' ? (
+                    <button
+                      type="button"
+                      className="text-left w-full text-[#374151] mb-2 hover:underline underline-offset-4"
+                      onClick={() => navigate(project.caseStudyPath)}
+                    >
+                      <h3>{project.title}</h3>
+                    </button>
+                  ) : (
+                    <h3 className="text-[#374151] mb-2">{project.title}</h3>
+                  )}
                   <p className="text-[#9CA3AF] mb-3 text-[0.95rem] leading-relaxed">
                     {project.description}
                   </p>
