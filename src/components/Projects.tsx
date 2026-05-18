@@ -132,16 +132,23 @@ export function Projects() {
                       scale: hoveredIndex === index ? 1.1 : 1,
                     }}
                     transition={{ duration: 0.6 }}
+                    className="w-full h-full"
                   >
-                    <ImageWithFallback
-                      src={project.image}
-                      alt={project.title}
-                      className={
-                        project.imageFit === 'contain'
-                          ? 'w-full h-full object-contain bg-white p-10'
-                          : 'w-full h-full object-cover'
-                      }
-                    />
+                    {project.imageFit === 'contain' ? (
+                      <div className="w-full h-full bg-white px-8 py-10 flex items-center justify-center">
+                        <ImageWithFallback
+                          src={project.image}
+                          alt={project.title}
+                          className="max-w-full max-h-full object-contain object-center"
+                        />
+                      </div>
+                    ) : (
+                      <ImageWithFallback
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
+                    )}
                   </motion.div>
 
                   {/* Gradient Overlay */}
