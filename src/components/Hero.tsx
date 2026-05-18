@@ -187,7 +187,7 @@ export function Hero() {
                 variant="outline"
                 className="border-2 border-[#C4B5FD] text-[#374151] hover:bg-[#C4B5FD]/10 px-8 py-6 backdrop-blur-sm bg-white/50"
               >
-                <a href="/koushika%20resume.pdf" download="koushika resume.pdf" aria-label="Download resume PDF">
+                <a href="/KOUSHIKA-resume.pdf" download="KOUSHIKA-resume.pdf" aria-label="Download resume PDF">
                   <Download className="mr-2 h-5 w-5" />
                   Download Resume
                 </a>
