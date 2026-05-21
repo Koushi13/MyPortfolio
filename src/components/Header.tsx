@@ -52,7 +52,7 @@ export function Header() {
             whileTap={{ scale: 0.95 }}
           >
             <span className="text-[1.5rem] bg-gradient-to-r from-[#C4B5FD] via-[#B8D4E8] to-[#A8D5BA] bg-clip-text text-transparent">
-              VM
+              Koushika
             </span>
             <motion.div
               className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#C4B5FD] to-[#A8D5BA]"
